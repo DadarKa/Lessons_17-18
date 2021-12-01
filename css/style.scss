@@ -1,0 +1,1441 @@
+/* Для шриштів: налаштування шрифта+кирилиця, підключаємо завжди! Чистимо непотрібні розміри шрифта в посиланні, для кращої оптимізації.
+ &display=swap&subset=cyrillic-ext */
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,700,900&display=swap&subset=cyrillic-ext");
+
+@import "_fonts";
+
+@import "_null";
+
+.footer {
+  padding: 20px 0px 20px 20px;
+  background-color: #5d62b5;
+}
+.footer__content {
+  text-align: center;
+}
+.footer a {
+  color: #f2726f;
+}
+
+/* --------------- */
+
+/* Умовні ПК, ноути та телевизори */
+/* 1050 з макета (контейнер + відступи) */
+//@media (max-width: 1050px) {
+//}
+/* Умовні планшети */
+//@media (max-width: 62em) {
+//}
+/* Умовні мобільні */
+//@media (max-width: 48em) {
+//}
+
+/* Mobile First */
+//@media (min-width: 540px) {
+//.block__items {
+//	display: flex;
+//	}
+//}
+
+[class*="__container"] {
+  box-sizing: content-box;
+  max-width: 65.624rem;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  flex-wrap: wrap;
+  @media (max-width: 53.5em) {
+    .header {
+      &__body {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 0px 0px 0px;
+        transition: all 0.2s ease 0s;
+        align-items: center;
+      }
+      &__content {
+        &:not(:last-child) {
+          margin-bottom: 22px;
+        }
+      }
+      &__info {
+        min-width: 100%;
+        justify-content: space-between;
+      }
+      &__nav {
+        display: flex;
+        justify-content: space-between;
+        flex: 0 1 auto;
+        max-width: 50rem;
+      }
+    }
+  }
+  @media (max-width: 48em) {
+    .header {
+      &__body {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        padding: 10px 0px 0px 0px;
+        transition: all 0.2s ease 0s;
+        align-items: flex-end;
+        position: relative;
+        @media (max-width: 48em) {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      &__content {
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+      &__info {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 26px 0px 0px 0px;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__logo {
+    font-weight: 900;
+    font-size: 1.625rem;
+    line-height: 1.5;
+    padding: 0px 0px 0px 50px;
+    background: url(../img/CarRepairandDoggie/header/logo.svg) 0 0 no-repeat;
+    min-height: 42px;
+    @media (max-width: 53.5em) {
+      display: flex;
+      min-width: 100%;
+      justify-content: center;
+      padding: 35px 0px 0px 0px;
+      background: url(../img/CarRepairandDoggie/header/logo.svg) center 0 / 36px 36px no-repeat;
+      &:not(:last-child) {
+        margin: 0px 0px 25px 0px;
+      }
+    }
+    @media (max-width: 48em) {
+      display: flex;
+      max-width: 100%;
+      align-items: center;
+      position: absolute;
+      top: 10px;
+      left: 0px;
+      padding: 0px 0px 0px 30px;
+      min-width: auto;
+      font-size: 1.25rem;
+      background: url(../img/CarRepairandDoggie/header/logo.svg) 0 10px / 20px no-repeat;
+    }
+  }
+
+  &__info {
+  }
+
+  &__nav {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+    @media (max-width: 48em) {
+      display: flex;
+      flex: 0 1 auto;
+      max-width: 100%;
+    }
+    @media (max-width: 36.625em) {
+      align-self: stretch;
+    }
+  }
+}
+.info-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  @media (max-width: 44.75em) {
+    display: none;
+  }
+  &__items {
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 1.83;
+    letter-spacing: 0.0125em;
+    padding: 0px 0px 0px 30px;
+    &:not(:last-child) {
+      margin: 0px 30px 0px 0px;
+    }
+    &_hours {
+      background: url(../img/CarRepairandDoggie/header/time.svg) 0 0 no-repeat;
+    }
+    &_call {
+      background: url(../img/CarRepairandDoggie/header/phone.svg) 0 0 no-repeat;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+  &__info {
+  }
+  &__info a {
+    color: #ffffff;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      color: #f2726f;
+    }
+  }
+}
+.link {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 2;
+  text-align: center;
+  letter-spacing: 0.0125em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: #f2726f;
+  padding: 4px 34px 4px 34px;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    color: #f2726f;
+    background-color: #ffffff;
+    border: 1px solid #f2726f;
+  }
+}
+.nav-header {
+  flex: 0 1 50%;
+  padding: 20px 40px 20px 40px;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  @media (max-width: 48em) {
+    padding: 15px 20px 15px 20px;
+  }
+  @media (max-width: 44.75em) {
+    margin-top: 40px;
+  }
+  @media (max-width: 36.625em) {
+    flex: 1 1 100%;
+    flex-direction: row-reverse;
+  }
+
+  &__items {
+    display: flex;
+    flex: 0 1 auto;
+    @media (max-width: 36.625em) {
+      display: none;
+    }
+    &:hover {
+      color: #f2726f;
+    }
+  }
+
+  &__item {
+    margin: 0px 35px 0px 0px;
+    @media (max-width: 48em) {
+      margin: 0px 20px 0px 0px;
+    }
+
+    &_arrow {
+      position: relative;
+      &::after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: url(../img/CarRepairandDoggie/header/more.svg) 0 0 no-repeat;
+        position: absolute;
+        top: 3px;
+        left: 60px;
+        cursor: pointer;
+      }
+    }
+    &_arrows {
+      position: relative;
+      &::after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: url(../img/CarRepairandDoggie/header/more.svg) 0 0 no-repeat;
+        position: absolute;
+        top: 3px;
+        left: 35px;
+        cursor: pointer;
+      }
+    }
+  }
+  &__item a {
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.57;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #000000;
+    transition: all 0.3s ease 0s;
+    @media (max-width: 20.125em) {
+      font-size: 16px;
+    }
+    &:hover {
+      color: #f2726f;
+    }
+  }
+}
+.nav-search {
+  flex: 0 1 50%;
+  &__input {
+    margin: 0px 0px 0px 20px;
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    &:hover {
+      border-bottom: 2px solid #f2726f;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__label {
+    cursor: pointer;
+    margin-right: 22px;
+  }
+  &__img {
+  }
+}
+.main {
+  position: relative;
+}
+.premier {
+  background: url(../img/CarRepairandDoggie/who_we_are/main_bg.jpg) center/cover no-repeat;
+  padding: 280px 0px 312px 0px;
+  width: 100%;
+  min-height: 100%;
+  @media (max-width: 53.5em) {
+    padding-top: 31.54%;
+  }
+  @media (max-width: 48em) {
+    padding: 22.66% 0px 8.66%;
+  }
+  @media (max-width: 36.625em) {
+    padding: 27.54% 0px 8.66%;
+  }
+  @media (max-width: 29.8125em) {
+    padding: 30.54% 0px 8.66%;
+  }
+  @media (max-width: 26.5em) {
+    padding: 35.54% 0px 8.66%;
+  }
+  @media (max-width: 22.1875em) {
+    padding: 40.54% 0px 8.66%;
+  }
+  &__container {
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    flex: 0 1 auto;
+    max-width: 36.43rem;
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #ffffff;
+    &:not(:last-child) {
+      margin-bottom: 0.85em;
+    }
+    @media (max-width: 37.25em) {
+      font-size: 2.8rem;
+    }
+    @media (max-width: 30.1875em) {
+      font-size: 2.4rem;
+    }
+    @media (max-width: 26.125em) {
+      font-size: 2rem;
+    }
+    @media (max-width: 22.0625em) {
+      font-size: 1.8rem;
+    }
+    @media (max-width: 20.125em) {
+      font-size: 1.5rem;
+    }
+  }
+}
+.link {
+  &_style {
+    display: flex;
+    align-self: flex-start;
+    box-shadow: (0px 8px 16px rgba(38, 38, 38, 0.24)), (0px 16px 24px rgba(38, 38, 38, 0.2));
+    padding: 12px 34px 12px 34px;
+  }
+}
+.who-we-are {
+  background-color: #f5f5f5;
+  padding: 0px 0px 5.28% 0px;
+  @media (max-width: 48em) {
+    margin-bottom: -50px;
+    background-color: #5d62b5;
+  }
+  &__container {
+  }
+  &__body {
+    position: relative;
+    top: -80px;
+    left: 0;
+    background-color: #5d62b5;
+    border-radius: 40px;
+    padding: 9.52% 8.28% 0px 8.28%;
+    @media (max-width: 48em) {
+      padding-bottom: 1px;
+      border-radius: 0px;
+      position: relative;
+      top: 0px;
+      padding: 5% 1%;
+    }
+    &::before {
+      content: "";
+      width: 19.142%;
+      padding-top: 30.19%;
+      background: url(../img/CarRepairandDoggie/decor/Circles.svg) 0 0 / 100% no-repeat;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(50%, -50%);
+      @media (max-width: 48em) {
+        display: none;
+      }
+    }
+  }
+  &__content {
+    color: #f5f5f5;
+    position: relative;
+    z-index: 2;
+    &:not(:last-child) {
+      margin-bottom: 3.375em;
+    }
+  }
+  &__icon {
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 2;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: url(../img/CarRepairandDoggie/icon/icon.svg) 0 -2px no-repeat;
+    padding: 0px 0px 0px 32px;
+    &:not(:last-child) {
+      margin-bottom: 2.75em;
+    }
+  }
+  &__title {
+    font-weight: 900;
+    font-size: 2.25rem;
+    line-height: 1.16;
+    color: #ffffff;
+    max-width: 36.43rem;
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+  &__text {
+    line-height: 1.5;
+    letter-spacing: 0.009em;
+    @media (max-width: 48em) {
+      font-size: 1.25rem;
+    }
+  }
+  &__picture {
+    position: relative;
+    &::before {
+      content: "";
+      width: 78.6%;
+      padding-top: 69.85%;
+      background: url(../img/CarRepairandDoggie/decor/Blob.svg) 0 0 / 100% no-repeat;
+      position: absolute;
+      top: -50%;
+      left: 0;
+      transform: translate(-15%, 3%);
+      z-index: 1;
+      @media (max-width: 48em) {
+        display: none;
+      }
+    }
+  }
+  &__img {
+    position: relative;
+    max-width: 100%;
+    border-radius: 40px;
+    margin-bottom: -11%;
+    z-index: 3;
+    box-shadow: 0px 8px 16px rgba(38, 38, 38, 0.24), 0px 16px 24px rgba(38, 38, 38, 0.2);
+    @media (max-width: 48em) {
+      display: none;
+    }
+  }
+}
+.dog {
+  background-color: #29c3be;
+  padding: 112px 0px 0px 0px;
+  overflow: hidden;
+  position: relative;
+  @media (max-width: 48em) {
+    padding: 3.9% 1% 6.51% 1%;
+  }
+  &__container {
+    position: relative;
+    &::before {
+      content: "";
+      width: 22.47%;
+      padding-top: 30.19%;
+      background: url(../img/CarRepairandDoggie/dog/Circles_dog.svg) 0 0 / 100% no-repeat;
+      position: absolute;
+      top: -15%;
+      left: -20%;
+      transform: translate(40%, 20%);
+      @media (max-width: 48em) {
+        display: none;
+      }
+    }
+    &::after {
+      content: "";
+      width: 47.14%;
+      padding-top: 36.09%;
+      background: url(../img/CarRepairandDoggie/dog/blob_3.png) 0 0 / 100% no-repeat;
+      position: absolute;
+      top: 0;
+      left: -25%;
+      transform: translate(10%, -60%);
+      @media (max-width: 48em) {
+        display: none;
+      }
+    }
+  }
+  &__body {
+    position: relative;
+    display: flex;
+    @media (max-width: 66.3125em) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
+.body-dog {
+  position: relative;
+  margin: 0px -25px 0px -25px;
+
+  &__picture {
+    position: relative;
+    z-index: 8;
+    @media (max-width: 66.375em) {
+      align-self: baseline;
+    }
+  }
+  &__img {
+    max-width: 100%;
+    @media (max-width: 48em) {
+      display: none;
+    }
+  }
+  &__content {
+    flex: 0 1 50%;
+    padding: 0px 25px 0px 25px;
+    position: relative;
+    z-index: 6;
+    @media (max-width: 66.3125em) {
+      align-self: center;
+    }
+    @media (max-width: 48em) {
+      align-self: flex-start;
+    }
+    &::before {
+      content: "";
+      width: 113.33%;
+      padding-top: 73.71%;
+      background: url(../img/CarRepairandDoggie/dog/Line.svg) 0 0 / 100% no-repeat;
+      position: absolute;
+      top: 0px;
+      right: -10%;
+      transform: translate(-2%, -30%);
+      @media (max-width: 77.8125em) {
+        transform: translate(-10%, -30%);
+      }
+      @media (max-width: 73.75em) {
+        transform: translate(-15%, -30%);
+      }
+      @media (max-width: 72.625em) {
+        transform: translate(-25%, -30%);
+      }
+      @media (max-width: 66.3125em) {
+        transform: translate(-2%, -30%);
+      }
+      @media (max-width: 48em) {
+        display: none;
+      }
+    }
+    &::after {
+      content: "";
+      width: 25.9%;
+      padding-top: 25.9%;
+      background: url(../img/CarRepairandDoggie/dog/ball.png) 0 0 / 100% no-repeat;
+      position: absolute;
+      top: 0px;
+      right: -5%;
+      z-index: 2;
+      transform: translate(55%, 5%);
+      @media (max-width: 77.8125em) {
+        transform: translate(40%, 25%);
+      }
+      @media (max-width: 76em) {
+        transform: translate(30%, 30%);
+      }
+      @media (max-width: 73.75em) {
+        transform: translate(20%, 40%);
+      }
+      @media (max-width: 72.625em) {
+        transform: translate(-25%, 50%);
+      }
+      @media (max-width: 66.3125em) {
+        transform: translate(55%, 5%);
+      }
+      @media (max-width: 48em) {
+        display: none;
+      }
+    }
+  }
+  &__title {
+    position: relative;
+    z-index: 5;
+    align-items: center;
+    font-weight: 900;
+    font-size: 2.25rem;
+    line-height: 1.16;
+    color: #ffffff;
+    max-width: 25.68rem;
+    &:not(:last-child) {
+      margin-bottom: 1.16em;
+    }
+  }
+}
+.link {
+  position: relative;
+}
+.link-shadow {
+  position: relative;
+  z-index: 10;
+  padding: 17px 34px 17px 34px;
+  box-shadow: none;
+}
+
+.healthy-switcher {
+  font-family: "HelveticaNeueCyr", "Arial", sans-serif;
+  position: relative;
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.0001) 0%, #1a1a1a 100%),
+    linear-gradient(0deg, rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), #303030;
+}
+.healthy {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  &__container {
+    display: flex;
+    align-items: center;
+    @media (max-width: 48em) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    flex: 0 1 50%;
+  }
+
+  &__title {
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #34c759;
+    transition: all 0.3s ease 0s;
+    background: url(../img/healthy_food/header/logo.svg) 0 0 no-repeat;
+    height: 25px;
+    padding: 10px 0px 0px 35px;
+    &:hover {
+      color: #ffffff;
+    }
+    @media (max-width: 48em) {
+      margin: 20px 0px 0px 0px;
+    }
+  }
+
+  &__menu {
+    flex: 0 1 50%;
+  }
+}
+.menu {
+  &__items {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__item {
+    & a {
+      font-weight: 700;
+      font-size: 0.875rem;
+      line-height: 6.4;
+      transition: all 0.3s ease 0s;
+      color: #ffffff;
+      &:hover {
+        color: #34c759;
+      }
+      @media (max-width: 48em) {
+        font-size: 1rem;
+      }
+    }
+    &:not(:last-child) {
+      margin-right: 3.92em;
+    }
+    @media (max-width: 48em) {
+      &:not(:last-child) {
+        margin-right: 2em;
+      }
+    }
+    @media (max-width: 21.25em) {
+      &:not(:last-child) {
+        margin-right: 1.5em;
+      }
+    }
+  }
+}
+.food {
+  background: url(../img/healthy_food/main/food.jpg) 0 0 / cover no-repeat;
+  padding: 130px 0px 161px 0px;
+  @media (max-width: 48em) {
+    background: url(../img/healthy_food/main/food.jpg) center / cover no-repeat;
+    padding: 170px 0px 50px 0px;
+  }
+
+  &__container {
+  }
+
+  &__content {
+    text-align: center;
+    &:not(:last-child) {
+      margin: 0px 0px 5.9375em 0px;
+    }
+  }
+
+  &__title {
+    font-size: 4.5rem;
+    line-height: 1.16;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    max-width: 68.75rem;
+    &_bold {
+      font-weight: 700;
+    }
+    &:not(:last-child) {
+      margin-bottom: 0.22em;
+    }
+    @media (max-width: 56.625rem) {
+      font-size: 4.25rem;
+    }
+    @media (max-width: 53.93rem) {
+      font-size: 3.75rem;
+    }
+    @media (max-width: 47.5rem) {
+      font-size: 3.125rem;
+    }
+    @media (max-width: 39.875rem) {
+      font-size: 2.5rem;
+    }
+    @media (max-width: 32.3125rem) {
+      font-size: 1.875rem;
+    }
+    @media (max-width: 24.68rem) {
+      font-size: 1.5625rem;
+    }
+    @media (max-width: 20.875rem) {
+      font-size: 1.375rem;
+    }
+  }
+
+  &__sub-title {
+    text-align: center;
+    line-height: 1.62;
+    letter-spacing: -0.0125em;
+    opacity: 0.7;
+    max-width: 37.0625rem;
+    margin: 0 auto;
+    &:not(:last-child) {
+      margin-bottom: 4.0625em;
+    }
+    @media (max-width: 48em) {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 1.375rem;
+    }
+  }
+
+  &__button {
+    font-weight: 900;
+    font-size: 1.125rem;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    padding: 25px 58px;
+    background-color: transparent;
+    border: 2px solid #34c759;
+    border-radius: 43px;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      color: #1a1a1a;
+      background-color: #34c759;
+    }
+    @media (max-width: 266.98px) {
+      font-size: 1rem;
+    }
+  }
+
+  &__data {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    margin: 0px -50px 0px -50px;
+  }
+}
+.data {
+  &__cards {
+  }
+  &__card {
+    flex: 1 1 33.333%;
+    padding: 0px 50px 0px 50px;
+    text-align: center;
+    min-width: 19.06rem;
+  }
+  &__title {
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.87;
+    & a {
+      color: #ffffff;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: #34c759;
+      }
+    }
+    @media (max-width: 48em) {
+      font-size: 1.5rem;
+    }
+
+    &_hours {
+      padding: 32px 0px 0px 0px;
+      &::before {
+        content: "";
+        width: 21px;
+        height: 21px;
+        background: url(../img/healthy_food/main/watch.svg) 0 0 no-repeat;
+        position: absolute;
+        top: 0;
+        left: 50%;
+      }
+    }
+
+    &_get {
+      padding: 32px 0px 0px 0px;
+      &::before {
+        content: "";
+        width: 21px;
+        height: 21px;
+        background: url(../img/healthy_food/main/near.svg) 0 0 no-repeat;
+        position: absolute;
+        top: 0;
+        left: 50%;
+      }
+    }
+
+    &_call {
+      padding: 32px 0px 0px 0px;
+      &::before {
+        content: "";
+        width: 21px;
+        height: 21px;
+        background: url(../img/healthy_food/main/call.svg) 0 0 no-repeat;
+        position: absolute;
+        top: 0;
+        left: 50%;
+      }
+    }
+  }
+
+  &__sub-title {
+    font-size: 0.875rem;
+    line-height: 4.28;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    @media (max-width: 48em) {
+      font-size: 1.25rem;
+    }
+  }
+}
+.food {
+  &__data {
+  }
+}
+.how-it-works {
+  padding: 55px 0px 0px 0px;
+  &__container {
+  }
+
+  &__block {
+    text-align: center;
+    max-width: 33.125rem;
+    margin: 0 auto;
+  }
+
+  &__big-title {
+  }
+
+  &__title {
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    margin: 0px -15px 0px -15px;
+  }
+
+  &__item {
+    flex: 1 1 25%;
+    padding: 0px 15px 0px 15px;
+    min-width: 245px;
+  }
+}
+.block-big-title {
+  font-weight: 900;
+  font-size: 6.25rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #303030;
+  position: relative;
+  @media (max-width: 48em) {
+    font-size: 5.625rem;
+  }
+  &::after {
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: #34c759;
+    position: absolute;
+    bottom: 0;
+    left: 46.5%;
+  }
+}
+.block-title {
+  font-size: 2.25rem;
+  line-height: 2.5;
+  letter-spacing: 0.2em;
+  text-transform: capitalize;
+  color: #d9d9d9;
+  transform: translate(0, -140%);
+  @media (max-width: 48em) {
+    font-size: 2rem;
+  }
+}
+.item-work {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 42px 24px;
+  border-radius: 6px;
+  background-color: #252525;
+  color: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    background-color: #34c759;
+    color: #191919;
+    & ::after {
+      background-color: #191919;
+    }
+    & p {
+      color: #191919;
+    }
+  }
+  &__title {
+    font-size: 1.375rem;
+    line-height: 1.18;
+    letter-spacing: -0.0125em;
+    text-transform: capitalize;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 1.63em;
+    }
+    &::after {
+      content: "";
+      width: 56px;
+      height: 2px;
+      background-color: #34c759;
+      position: absolute;
+      bottom: -50%;
+      left: 0px;
+    }
+  }
+  &__text {
+    font-size: 0.8125rem;
+    line-height: 1.38;
+    letter-spacing: -0.0125em;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+.dishes {
+  padding: 60px 0px 30px 0px;
+  &__container {
+  }
+  &__block {
+    text-align: center;
+    max-width: 33.125rem;
+    margin: 0 auto;
+  }
+
+  &__big-title {
+  }
+
+  &__title {
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    margin: 0px -15px 0px -15px;
+  }
+
+  &__item {
+    flex: 1 1 33.333%;
+    padding: 0px 15px 0px 15px;
+  }
+}
+.block-big-title {
+  &_width {
+    @media (max-width: 24.87em) {
+      font-size: 4.5rem;
+    }
+  }
+}
+.block-title {
+  &_width {
+    @media (max-width: 24.87em) {
+      font-size: 1.5rem;
+    }
+  }
+}
+.item-dishes {
+  display: flex;
+  flex-direction: column;
+  min-width: 20rem;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  @media (max-width: 24.87em) {
+    min-width: 15.625rem;
+  }
+
+  &__pictures {
+    padding: 0px 0px 73.52% 0px;
+  }
+
+  &__image {
+  }
+  &__picture {
+    display: flex;
+  }
+  &__arrow {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+  }
+  &__content {
+    padding: 8.52% 8.82% 7.05%;
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 0.9375;
+    color: #d9d9d9;
+    &:not(:last-child) {
+      margin-bottom: 0.09em;
+    }
+    @media (max-width: 48em) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__sub-title {
+    font-size: 0.75rem;
+    line-height: 1.3;
+    letter-spacing: -0.0125em;
+    color: #a4a8b2;
+    &:not(:last-child) {
+      margin-bottom: 1.66em;
+    }
+    @media (max-width: 48em) {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__text {
+    font-size: 0.8125rem;
+    line-height: 1.38;
+    letter-spacing: -0.0125em;
+    color: #85878c;
+    flex: 1 1 auto;
+    &:not(:last-child) {
+      margin-bottom: 2.3em;
+    }
+    @media (max-width: 48em) {
+      font-size: 1rem;
+    }
+  }
+
+  &__order {
+    display: flex;
+    column-gap: 40px;
+    justify-content: center;
+    @media (max-width: 24.87em) {
+      flex-wrap: wrap;
+      row-gap: 20px;
+    }
+  }
+
+  &__raiting {
+  }
+
+  &__button {
+    font-weight: 900;
+    font-size: 0.625rem;
+    line-height: 4;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background-color: #262626;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0px 26px;
+    border-radius: 30px;
+    border: 2px solid #303030;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      color: #252525;
+      background-color: #34c759;
+    }
+  }
+}
+.recipes {
+  padding: 30px 0px 30px 0px;
+  @media (max-width: 48em) {
+    padding: 0px 0px 30px 0px;
+  }
+  &__container {
+  }
+
+  &__block {
+    text-align: center;
+    max-width: 34.775rem;
+    margin: 0 auto;
+  }
+
+  &__big-title {
+  }
+
+  &__title {
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    margin: 0px -15px 0px -15px;
+  }
+}
+
+.item-recipes {
+  padding: 0px 15px 0px 15px;
+
+  flex: 1 1 50%;
+  min-width: 30em;
+  @media (max-width: 30em) {
+    min-width: 20em;
+  }
+
+  &__items {
+    margin: -15px 0px -15px 0px;
+  }
+
+  &__item {
+    padding: 15px 0px 15px 0px;
+  }
+
+  &__card {
+    padding: 4.76% 6.66%;
+    background: url(../img/healthy_food/recipes/icon/mangal.jpg) center / cover no-repeat;
+    border-radius: 6px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  }
+  &__arrow {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    padding: 13px 0px 0px 13px;
+    transform: translate(0, 0);
+    transition: all 0.3s ease 0s;
+    &:hover {
+      background-color: rgba(52, 199, 89, 0.3);
+    }
+  }
+  &__content {
+    text-align: center;
+    max-width: 22.43em;
+    &:not(:last-child) {
+      margin-bottom: 3.75em;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 0.625rem;
+    line-height: 2.5;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-flex;
+    padding: 0px 15.5px;
+    border-radius: 6px;
+    &:not(:last-child) {
+      margin-bottom: 6.5em;
+    }
+  }
+
+  &__sub-title {
+    font-size: 0.875rem;
+    line-height: 2.142;
+    &:not(:last-child) {
+      margin-bottom: 1.78em;
+    }
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    line-height: 1.66;
+    &:not(:last-child) {
+      margin-bottom: 1.875em;
+    }
+  }
+
+  &__name {
+    font-size: 0.875rem;
+    line-height: 2.142;
+  }
+
+  &__response {
+    display: flex;
+    column-gap: 24px;
+    justify-content: center;
+  }
+
+  &__revision {
+  }
+
+  &__coment {
+  }
+}
+.item-card {
+  background: #252525;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 30px 20px 20px 25px;
+  height: 100%;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    background-color: #34c759;
+    color: #252525;
+    & h3 {
+      background-color: #000000;
+      color: #ffffff;
+    }
+    & p {
+      color: #1a1a1a;
+    }
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.875;
+    &:not(:last-child) {
+      margin-bottom: 0.625em;
+    }
+    @media (max-width: 48em) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    @media (max-width: 48em) {
+      flex-direction: column;
+      row-gap: 30px;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 0.625rem;
+    line-height: 2.5;
+    text-align: center;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    padding: 0px 15.5px;
+    @media (max-width: 48em) {
+      font-size: 1rem;
+    }
+  }
+
+  &__sub-title {
+    font-size: 0.75rem;
+    line-height: 2.08;
+    color: #b3b3b3;
+    @media (max-width: 48em) {
+      font-size: 1rem;
+      color: #ffffff;
+    }
+  }
+
+  &__item {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+  }
+  &__response {
+    display: flex;
+    column-gap: 27px;
+    align-items: center;
+  }
+  &__revision {
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 2.5;
+    color: #d8d8d8;
+    @media (max-width: 48em) {
+      font-size: 1rem;
+    }
+    & img {
+      padding: 5px 15px 0px 0px;
+    }
+  }
+
+  &__coment {
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 2.5;
+    color: #d8d8d8;
+    @media (max-width: 48em) {
+      font-size: 1rem;
+    }
+    & img {
+      padding: 5px 15px 0px 0px;
+    }
+  }
+}
+.block-big-title {
+  &_style {
+    @media (max-width: 33.125em) {
+      font-size: 4.5rem;
+    }
+    @media (max-width: 25.06em) {
+      font-size: 3.8rem;
+    }
+  }
+}
+.block-title {
+  &_style {
+    @media (max-width: 33.125em) {
+      font-size: 1.5rem;
+    }
+    @media (max-width: 25.06em) {
+      font-size: 1rem;
+      transform: translate(0, -160%);
+    }
+  }
+}
+.item-card {
+  &_bg {
+    background: url(../img/healthy_food/recipes/icon/am.jpg) center / cover no-repeat;
+    padding: 30px 25px 20px 30px;
+    color: #ffffff;
+    transition: all 0.3s ease 0s;
+    overflow: hidden;
+    &:hover {
+      transform: scale3d(1.1, 1.1, 1.1);
+      & h3 {
+        color: #ffffff;
+      }
+      & p {
+        font-size: 700;
+        color: #ffffff;
+      }
+    }
+  }
+}
