@@ -1607,6 +1607,7 @@ body {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
+  height: 100%;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
