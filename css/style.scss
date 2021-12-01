@@ -265,6 +265,12 @@
 
     &_arrow {
       position: relative;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
       &::after {
         content: "";
         width: 16px;
@@ -278,6 +284,12 @@
     }
     &_arrows {
       position: relative;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
       &::after {
         content: "";
         width: 16px;
