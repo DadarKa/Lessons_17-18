@@ -994,6 +994,14 @@ body {
   }
 }
 
+@media (max-width: 66.375em) {
+  .body-dog__content::before {
+    -webkit-transform: translate(-25%, -50%);
+        -ms-transform: translate(-25%, -50%);
+            transform: translate(-25%, -50%);
+  }
+}
+
 @media (max-width: 66.3125em) {
   .body-dog__content::before {
     -webkit-transform: translate(-2%, -30%);
@@ -1051,6 +1059,14 @@ body {
     -webkit-transform: translate(-25%, 25%);
         -ms-transform: translate(-25%, 25%);
             transform: translate(-25%, 25%);
+  }
+}
+
+@media (max-width: 66.375em) {
+  .body-dog__content::after {
+    -webkit-transform: translate(-40%, -45%);
+        -ms-transform: translate(-40%, -45%);
+            transform: translate(-40%, -45%);
   }
 }
 
