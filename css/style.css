@@ -843,11 +843,19 @@ body {
   padding-top: 30.19%;
   background: url(../img/CarRepairandDoggie/dog/Circles_dog.svg) 0 0/100% no-repeat;
   position: absolute;
-  top: -15%;
-  left: -20%;
+  top: 5%;
+  left: -37.5%;
   -webkit-transform: translate(40%, 20%);
       -ms-transform: translate(40%, 20%);
           transform: translate(40%, 20%);
+}
+
+@media (max-width: 66.375em) {
+  .dog__container::before {
+    -webkit-transform: translate(90%, 20%);
+        -ms-transform: translate(90%, 20%);
+            transform: translate(90%, 20%);
+  }
 }
 
 @media (max-width: 48em) {
@@ -863,10 +871,10 @@ body {
   background: url(../img/CarRepairandDoggie/dog/blob_3.png) 0 0/100% no-repeat;
   position: absolute;
   top: 0;
-  left: -25%;
-  -webkit-transform: translate(10%, -60%);
-      -ms-transform: translate(10%, -60%);
-          transform: translate(10%, -60%);
+  left: -45%;
+  -webkit-transform: translate(25%, -50%);
+      -ms-transform: translate(25%, -50%);
+          transform: translate(25%, -50%);
 }
 
 @media (max-width: 48em) {
