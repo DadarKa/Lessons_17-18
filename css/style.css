@@ -938,6 +938,7 @@ body {
   padding: 0px 25px 0px 25px;
   position: relative;
   z-index: 6;
+  margin-top: 50px;
 }
 
 @media (max-width: 66.3125em) {
@@ -945,6 +946,7 @@ body {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    margin-top: 0px;
   }
 }
 
@@ -961,8 +963,8 @@ body {
   padding-top: 73.71%;
   background: url(../img/CarRepairandDoggie/dog/Line.svg) 0 0/100% no-repeat;
   position: absolute;
-  top: 0px;
-  right: -10%;
+  top: -8%;
+  right: -5%;
   -webkit-transform: translate(-2%, -30%);
       -ms-transform: translate(-2%, -30%);
           transform: translate(-2%, -30%);
@@ -1022,33 +1024,33 @@ body {
 
 @media (max-width: 77.8125em) {
   .body-dog__content::after {
-    -webkit-transform: translate(40%, 25%);
-        -ms-transform: translate(40%, 25%);
-            transform: translate(40%, 25%);
+    -webkit-transform: translate(25%, 15%);
+        -ms-transform: translate(25%, 15%);
+            transform: translate(25%, 15%);
   }
 }
 
 @media (max-width: 76em) {
   .body-dog__content::after {
-    -webkit-transform: translate(30%, 30%);
-        -ms-transform: translate(30%, 30%);
-            transform: translate(30%, 30%);
+    -webkit-transform: translate(25%, 15%);
+        -ms-transform: translate(25%, 15%);
+            transform: translate(25%, 15%);
   }
 }
 
 @media (max-width: 73.75em) {
   .body-dog__content::after {
-    -webkit-transform: translate(20%, 40%);
-        -ms-transform: translate(20%, 40%);
-            transform: translate(20%, 40%);
+    -webkit-transform: translate(5%, 15%);
+        -ms-transform: translate(5%, 15%);
+            transform: translate(5%, 15%);
   }
 }
 
 @media (max-width: 72.625em) {
   .body-dog__content::after {
-    -webkit-transform: translate(-25%, 50%);
-        -ms-transform: translate(-25%, 50%);
-            transform: translate(-25%, 50%);
+    -webkit-transform: translate(-25%, 25%);
+        -ms-transform: translate(-25%, 25%);
+            transform: translate(-25%, 25%);
   }
 }
 
