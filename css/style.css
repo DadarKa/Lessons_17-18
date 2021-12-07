@@ -902,12 +902,14 @@ body {
 .body-dog__picture {
   position: relative;
   z-index: 8;
+  margin-left: -20%;
 }
 
 @media (max-width: 66.375em) {
   .body-dog__picture {
     -ms-flex-item-align: baseline;
         align-self: baseline;
+    margin-left: 0px;
   }
 }
 
